@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/redis-study?autoReconnect=true&useUnicode=true&characterEncoding=utf8
+    username: root
+    password: 1234
+  jpa:
+    properties:
+      hibernate:
+        format_sql: true
+        default_batch_fetch_size: 1000
+    hibernate:
+      ddl-auto: create
+  redis:
+    host: localhost
+    port: 6379
+
+logging:
+  level:
+    org.hibernate.SQL: debug
+    org.hivernate.type: trace
